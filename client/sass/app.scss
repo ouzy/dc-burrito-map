@@ -82,9 +82,7 @@ body {
 		-webkit-margin-after: .1em;
 	}
 	@include small() {
-		&:hover {
-			background-color: initial;
-		}
+		
 	}
 }
 
