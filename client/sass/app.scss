@@ -73,13 +73,18 @@ body {
 	transition: all .4s;
 	padding: 20px;
 	cursor: pointer;
-	&:hover {
+	&.active, &:hover {
 		background-color: #5D6B66;
 	}
 	.street {
 		padding-left: 10px;
 		-webkit-margin-before: .1em;
 		-webkit-margin-after: .1em;
+	}
+	@include small() {
+		&:hover {
+			background-color: initial;
+		}
 	}
 }
 

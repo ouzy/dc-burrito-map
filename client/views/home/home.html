@@ -36,6 +36,8 @@
 				map.featureLayer.on('ready', function(e) {
 			    $('.location_item').click(function() {
 			    	var x = $(this).find('.name').html();
+			    	$('.location_item').removeClass('active');
+			    	$(this).addClass('active');
 			    	//console.log(x);
 			    	map.featureLayer.eachLayer(function(marker) {
 			        if (marker.feature.properties.title === x) {
