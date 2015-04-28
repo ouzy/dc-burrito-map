@@ -1,0 +1,88 @@
+@import "bourbon/bourbon";
+@import 'text';
+
+//Breakpoint Mixin
+$screen-sm: 800px;
+@mixin small(){
+	@media (max-width: $screen-sm){
+		@content;
+	}
+}
+
+* {
+   	@include box-sizing(border-box);
+
+   	&:before,
+   	&:after {
+   		@include box-sizing(border-box);
+   	}
+}
+
+body {
+	background-color: #6BAE94;
+	color: white;
+	height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+.container {
+	width: 100%;
+	float: left;
+	position: relative;
+	.site-title {
+		padding-left: 20px;
+		
+	}
+	@include small() {
+		height: 100vh;
+	}
+}
+
+.container_left {
+	width: 50%;
+	float: left;
+	@include small() {
+		width: 100%;
+		height: 50%;
+		overflow-y: scroll;
+		float: left;
+		top: 0;
+	}
+}
+
+#map {
+	height: 100%;
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 50%;
+	@include small() {
+		width: 100%;
+		height: 50vh;
+		top: initial;
+		bottom: 0;
+		position: relative;
+		float: left;
+	}
+}
+
+.location_item {
+	width: 100%;
+	transition: all .4s;
+	padding: 20px;
+	cursor: pointer;
+	&:hover {
+		background-color: #5D6B66;
+	}
+	.street {
+		padding-left: 10px;
+		-webkit-margin-before: .1em;
+		-webkit-margin-after: .1em;
+	}
+}
+
+.end {
+	margin-top: 50px;
+	text-align: center;
+}

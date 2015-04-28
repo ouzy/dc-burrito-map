@@ -1,0 +1,13 @@
+$header-font: "aktiv-grotesk-std";
+$body_font: "museo-sans";
+
+body {
+	font-family: $body_font;
+}
+h1, h2, h3, h4, h5 {
+	font-family: $header-font;
+	-webkit-margin-before: 0;
+  -webkit-margin-after: 0.53em;
+  color:#fff;
+	
+}
