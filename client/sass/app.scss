@@ -73,7 +73,13 @@ body {
 	transition: all .4s;
 	padding: 20px;
 	cursor: pointer;
-	&.active, &:hover {
+	&.active {
+		background-color: darken(#5D6B66, 10%);
+		&:hover {
+			background-color: darken(#5D6B66, 10%);
+		}
+	}
+	&:hover {
 		background-color: #5D6B66;
 	}
 	.street {
