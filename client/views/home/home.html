@@ -30,10 +30,10 @@
 				// Provide your access token
 				L.mapbox.accessToken = 'pk.eyJ1Ijoib21hcmlrbyIsImEiOiJKSFUyYkZNIn0.wJJWnicZhoLQPafx4yPNLQ';
 				// Create a map in the div #map
-				var map = L.mapbox.map('map', 'omariko.m1fj9o0f')
-					.setView([38.905, -77.028], 13);
+				var map = L.mapbox.map('map', 'omariko.m1fj9o0f');
 
 				map.featureLayer.on('ready', function(e) {
+					map.setView([38.90532, -77.028], 13);
 			    $('.location_item').click(function() {
 			    	var x = $(this).find('.name').html();
 			    	$('.location_item').removeClass('active');
@@ -43,8 +43,8 @@
 			        if (marker.feature.properties.title === x) {
 			        	marker.openPopup();
 		        	}
-			    });
-				});	
+			    	});
+					});	
 				});
 			</script>
   	</div>
